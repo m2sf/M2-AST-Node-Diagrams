@@ -22,11 +22,11 @@
  *
  * @file
  *
- * root.dot
+ * empty.dot
  *
- * AST root node diagram.
+ * EMPTY node diagram.
  *
- * Usage: $ dot root.dot -Tps > root.ps
+ * Usage: $ dot empty.dot -Tps > empty.ps
  *
  * @license
  *
@@ -45,39 +45,16 @@
  * NB: Components in the domain part of email addresses are in reverse order.
  */
 
-/*** AST Root Node ***/
+/*** Empty Node ***/
 
-digraph AST {
+digraph EMPTY {
   graph [orientation=landscape,fontname=helvetica];
   node [fontname=helvetica,fontsize=10,shape=box,height=0.25];
   
   node [style=solid];
   edge [arrowhead=none];
-  astRoot -> AST;
-  astRoot [style=rounded];
-  edge [arrowhead=normal];
-  
-  AST -> { FILENAME OPTIONS compilationUnit };
-  compilationUnit [style=rounded];
-  node [style=filled,fillcolor=lightgrey];
-  FILENAME -> { "\"filename\"" };
-  
-  node [style=filled,fillcolor=lightgrey];
-  OPTIONS -> { opt0 opt1 opt2 };
-  edge [style=invis]; node [width=0]; nodesep=0;
-  OPTIONS -> ellipsis;
-  edge [style=solid]; node [width=0.75]; nodesep=0.25;
-  OPTIONS -> optN;
-  opt0 [label="\"opt-0\""];
-  opt1 [label="\"opt-1\""];
-  opt2 [label="\"opt-2\""];
-  ellipsis [label="..."];
-  ellipsis [shape=none,fillcolor=none];
-  optN [label="\"opt-N\""];
-  
-  node [style=solid,fillcolor=none];
-  edge [arrowhead=none];
-  compilationUnit -> { DEFMOD IMPMOD };
+  emptyNode -> EMPTY;
+  emptyNode [style=rounded];
 }
 
 /* END OF FILE */
