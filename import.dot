@@ -52,14 +52,9 @@ digraph IMPORT {
   node [fontname=helvetica,fontsize=10,shape=box,height=0.25];
   
   node [style=solid];
-  edge [arrowhead=none];
-  importNode -> IMPORT;
-  importNode [style=rounded];
-    
-  node [style=rounded];
   edge [arrowhead=normal];
   IMPORT -> idlist0;
-  idlist0 [label="identList"];
+  idlist0 [label="identList",style=rounded];
 }
 
 /* END OF FILE */
