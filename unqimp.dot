@@ -52,11 +52,7 @@ digraph UNQIMP {
   node [fontname=helvetica,fontsize=10,shape=box,height=0.25];
   
   node [style=solid];
-  edge [arrowhead=none];
-  unqImportNode -> UNQIMP;
-  unqImportNode [style=rounded];
   edge [arrowhead=normal];
-  
   UNQIMP -> id0;
   id0 [label="IDENT"];
   
