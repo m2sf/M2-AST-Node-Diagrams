@@ -51,33 +51,29 @@ digraph IMPLIST {
   graph [orientation=landscape,fontname=helvetica];
   node [fontname=helvetica,fontsize=10,shape=box,height=0.25];
   
+  /* IMPLIST */
   node [style=solid];
-  edge [arrowhead=none];
-  importListNode -> IMPLIST;
-  importListNode [style=rounded];
-  
-  node [style=invis]; edge [style=invis];
-  spacer0 -> dummy0;
-  node [style=solid];
-  spacer0 -> import;
-  edge [style=solid];
-  
-  import -> { IMPORT UNQIMP };
-  import [style=rounded];
-  
-  node [style=rounded];
   edge [arrowhead=normal];
   IMPLIST -> { imp0 imp1 imp2 };
   edge [style=invis]; node [width=0]; nodesep=0;
   IMPLIST -> ellipsis0;
   edge [style=solid]; node [width=0.75]; nodesep=0.25;
   IMPLIST -> impN;
-  imp0 [label="import-0"];
-  imp1 [label="import-1"];
-  imp2 [label="import-2"];
+  imp0 [label="import-0",style=rounded];
+  imp1 [label="import-1",style=rounded];
+  imp2 [label="import-2",style=rounded];
   ellipsis0 [label="..."];
   ellipsis0 [shape=none];
-  impN [label="import-N"];  
+  impN [label="import-N",style=rounded];
+  
+  /* definition */
+  edge [style=invis];
+  node [style=rounded];
+  imp2 -> import
+  node [style=solid];
+  edge [style=solid,arrowhead=none];
+  import -> { IMPORT UNQIMP };
+  import [style=rounded];
 }
 
 /* END OF FILE */
