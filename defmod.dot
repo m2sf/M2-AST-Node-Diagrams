@@ -45,68 +45,29 @@
  * NB: Components in the domain part of email addresses are in reverse order.
  */
 
-/*** Definition Module Node ***/
+/*** DEFMOD Node ***/
 
 digraph DEFMOD {
   graph [orientation=landscape,fontname=helvetica];
   node [fontname=helvetica,fontsize=10,shape=box,height=0.25];
     
-  DEFMOD -> id0;
+  DEFMOD -> { id0 id1 id2 };
   id0 [label="IDENT"];
+  id1 [label="importList",style=rounded];
+  id2 [label="definitionList",style=rounded];
+  
   id0 -> moduleIdent;
   moduleIdent [style=filled,fillcolor=lightgrey];
   
-  node [style=invis]; edge [style=invis];
-  DEFMOD -> ___veryLongDummy0___;
-  node [style=solid]; edge [style=solid];
-  
-  DEFMOD -> importList;
-  
-  node [style=invis]; edge [style=invis];
-  DEFMOD -> ___veryLongDummy1___;
-  node [style=solid]; edge [style=solid];
-  
-  DEFMOD -> definitionList;
-  
-  node [style=solid];
   edge [arrowhead=none];
-  importList [style=rounded];
-  importList -> { IMPLIST empty0 };
-  empty0 [label="EMPTY"];
-  edge [arrowhead=normal];
   
-  node [style=rounded];
-  IMPLIST -> { imp0 imp1 imp2 };
-  edge [style=invis]; node [width=0]; nodesep=0;
-  IMPLIST -> ellipsis0;
-  edge [style=solid]; node [width=0.75]; nodesep=0.25;
-  IMPLIST -> impN;
-  imp0 [label="import-0"];
-  imp1 [label="import-1"];
-  imp2 [label="import-2"];
-  ellipsis0 [label="..."];
-  ellipsis0 [shape=none];
-  impN [label="import-N"];
+  id1 -> { id3 id4 };
+  id3 [label="IMPLIST"];
+  id4 [label="EMPTY"];
   
-  node [style=solid];
-  edge [arrowhead=none];
-  definitionList [style=rounded];
-  definitionList -> { DEFLIST empty1 };
-  empty1 [label="EMPTY"];
-  edge [arrowhead=normal];
-    
-  node [style=rounded];
-  DEFLIST -> { defn0 defn1 defn2 };
-  edge [style=invis]; node [width=0]; nodesep=0;
-  DEFLIST -> ellipsis1;
-  edge [style=solid]; node [width=0.75]; nodesep=0.25;
-  DEFLIST -> defnN;
-  defn0 [label="defn-0"];
-  defn1 [label="defn-1"];
-  defn2 [label="defn-2"];
-  ellipsis1 [label="..."];
-  ellipsis1 [shape=none];
-  defnN [label="defn-N"];
+  id2 -> { id5 id6 };
+  id5 [label="DEFLIST"];
+  id6 [label="EMPTY"];
 }
 
 /* END OF FILE */
