@@ -52,9 +52,6 @@ digraph AST {
   node [fontname=helvetica,fontsize=10,shape=box,height=0.25];
   
   node [style=solid];
-  edge [arrowhead=none];
-  astRoot -> AST;
-  astRoot [style=rounded];
   edge [arrowhead=normal];
   
   AST -> { FILENAME OPTIONS compilationUnit };
