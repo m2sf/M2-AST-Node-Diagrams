@@ -67,10 +67,9 @@ digraph PROCDEF {
   id3 [label="FPARAMLIST"];
   id4 [label="EMPTY"];
   
-  id2 -> { id5 id6 id7 };
-  id5 [label="IDENT"];
-  id6 [label="QUALIDENT"];
-  id7 [label="EMPTY"];
+  id2 -> { id5 id6 };
+  id5 [label="QUALIDENT"];
+  id6 [label="EMPTY"];
 }
 
 /* END OF FILE */
