@@ -55,7 +55,14 @@ digraph DEREF {
   edge [arrowhead=normal];
   
   DEREF -> id0;
-  id0 [label="designator",style=rounded];
+  id0 [label="pointer",style=rounded];
+  
+  edge [arrowhead=none];
+
+  id0 -> { id1 id2 id3 };
+  id1 [label="QUALIDENT"];
+  id2 [label="DEREF"];
+  id3 [label="DESIG"];
 }
 
 /* END OF FILE */
