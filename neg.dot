@@ -24,7 +24,7 @@
  *
  * neg.dot
  *
- * DEREF node diagram.
+ * NEG node diagram.
  *
  * Usage: $ dot neg.dot -Tps > neg.ps
  *
