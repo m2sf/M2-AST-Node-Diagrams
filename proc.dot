@@ -56,8 +56,8 @@ digraph PROC {
   
   PROC -> { id0 id1 id2 id3 };
   id0 [label="IDENT"];
-  id1 [label="FPARAMLIST"];
-  id2 [label="retType",style=rounded];
+  id1 [label="formalParamList",style=rounded];
+  id2 [label="returnedType",style=rounded];
   id3 [label="BLOCK"];
   
   id0 -> id4;
@@ -65,9 +65,13 @@ digraph PROC {
   
   edge [arrowhead=none];
   
-  id2 -> { id5 id6 };
-  id5 [label="QUALIDENT"];
+  id1 -> { id5 id6 };
+  id5 [label="FPARAMLIST"];
   id6 [label="EMPTY"];
+  
+  id2 -> { id7 id8 };
+  id7 [label="QUALIDENT"];
+  id8 [label="EMPTY"];
 }
 
 /* END OF FILE */
