@@ -55,7 +55,7 @@ digraph DEREF {
   edge [arrowhead=normal];
   
   DEREF -> id0;
-  id0 [label="expr",style=rounded];
+  id0 [label="designator",style=rounded];
 }
 
 /* END OF FILE */
