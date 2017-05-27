@@ -56,7 +56,13 @@ digraph PCALL {
   
   PCALL -> { id0 id1 };
   id0 [label="designator",style=rounded];
-  id1 [label="ARGS"];
+  id1 [label="actualParams",style=rounded];
+  
+  edge [arrowhead=none];
+  
+  id1 -> { id2 id3 };
+  id2 [label="ARGS"];
+  id3 [label="EMPTY"];
 }
 
 /* END OF FILE */
