@@ -55,13 +55,7 @@ digraph CHRVAL {
   edge [arrowhead=normal];
   
   CHRVAL -> id0;
-  id0 [label="character code value",style=rounded];
-  
-  edge [arrowhead=none];
-  
-  id0 -> { id1 id2 };
-  id1 [label="decimal literal",style=filled,fillcolor=lightgrey];
-  id2 [label="#non-decimal literal",style=filled,fillcolor=lightgrey];
+  id0 [label="#character code literal",style=filled,fillcolor=lightgrey];
 }
 
 /* END OF FILE */
