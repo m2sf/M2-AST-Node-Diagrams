@@ -55,8 +55,8 @@ digraph REPEAT {
   edge [arrowhead=normal];
   
   REPEAT -> { id0 id1 };
-  id1 [label="STMTSEQ"];
-  id0 [label="expr",style=rounded];
+  id0 [label="STMTSEQ"];
+  id1 [label="expr",style=rounded];
 }
 
 /* END OF FILE */
