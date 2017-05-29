@@ -63,7 +63,7 @@ digraph TYPEDEF {
   edge [arrowhead=none];
   id1 -> { id2 id3 };
   
-  id2 [label="typeNode",style=rounded];
+  id2 [label="anyType",style=rounded];
   id3 [label="EMPTY",style=solid];
 }
 
