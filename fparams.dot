@@ -53,15 +53,10 @@ digraph FPARAMS {
   
   node [style=solid];
   edge [arrowhead=none];
-  
-  id0 -> FPARAMS;
-  id0 [label="formalParams",style=rounded];
-  
-  edge [arrowhead=normal];
-  
-  FPARAMS -> { id1 id2 };
-  id1 [label="IDENTLIST"];
-  id2 [label="FORMALTYPE"];
+    
+  FPARAMS -> { id0 id1 };
+  id0 [label="IDENTLIST"];
+  id1 [label="FORMALTYPE"];
 }
 
 /* END OF FILE */
