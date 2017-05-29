@@ -56,7 +56,7 @@ digraph VARDECL {
   
   VARDECL -> { id0 id1 };
   id0 [label="IDENTLIST"];
-  id1 [label="fieldType",style=rounded];
+  id1 [label="anyFieldType",style=rounded];
 }
 
 /* END OF FILE */
