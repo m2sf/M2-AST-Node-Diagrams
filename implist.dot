@@ -51,7 +51,6 @@ digraph IMPLIST {
   graph [orientation=landscape,fontname=helvetica];
   node [fontname=helvetica,fontsize=10,shape=box,height=0.25];
   
-  /* IMPLIST */
   node [style=solid];
   edge [arrowhead=normal];
   IMPLIST -> { imp0 imp1 imp2 };
@@ -65,15 +64,6 @@ digraph IMPLIST {
   ellipsis0 [label="..."];
   ellipsis0 [shape=none];
   impN [label="import-N",style=rounded];
-  
-  /* definition */
-  edge [style=invis];
-  node [style=rounded];
-  imp2 -> import
-  node [style=solid];
-  edge [style=solid,arrowhead=none];
-  import -> { IMPORT UNQIMP };
-  import [style=rounded];
 }
 
 /* END OF FILE */
