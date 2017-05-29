@@ -56,7 +56,7 @@ digraph VFLIST {
   
   VFLIST -> { id0 id1 id2 id3 };
   id0 [label="caseIdent",style=rounded];
-  id1 [label="type",style=rounded];
+  id1 [label="caseType",style=rounded];
   id2 [label="VARIANTLIST"];
   id3 [label="defaultFieldListSeq",style=rounded];
   
@@ -66,9 +66,13 @@ digraph VFLIST {
   id4 [label="IDENT"];
   id5 [label="EMPTY"];
   
-  id3 -> { id6 id7 };
-  id6 [label="FIELDLISTSEQ"];
+  id1 -> { id6 id7 };
+  id6 [label="QUALIDENT"];
   id7 [label="EMPTY"];
+  
+  id3 -> { id8 id9 };
+  id8 [label="FIELDLISTSEQ"];
+  id9 [label="EMPTY"];
 }
 
 /* END OF FILE */
