@@ -53,15 +53,12 @@ digraph UNQIMP {
   
   node [style=solid];
   edge [arrowhead=normal];
-  UNQIMP -> id0;
+  UNQIMP -> { id0 id1 };
   id0 [label="IDENT"];
+  id1 [label="IDENTLIST"];
   
-  id0 -> { "moduleIdent" };
-  moduleIdent [style=filled,fillcolor=lightgrey];
-  
-  node [style=rounded];
-  UNQIMP -> idlist0;
-  idlist0 [label="identList"];
+  id0 -> id2;
+  id2 [label="moduleIdent",style=filled,fillcolor=lightgrey];
 }
 
 /* END OF FILE */

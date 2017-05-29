@@ -53,8 +53,8 @@ digraph IMPORT {
   
   node [style=solid];
   edge [arrowhead=normal];
-  IMPORT -> idlist0;
-  idlist0 [label="identList",style=rounded];
+  IMPORT -> id0;
+  id0 [label="IDENTLIST"];
 }
 
 /* END OF FILE */
