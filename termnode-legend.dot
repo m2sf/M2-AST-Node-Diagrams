@@ -55,17 +55,17 @@ digraph termNodeLegend {
   edge [arrowhead=normal];
   
   termNodeLegend -> { id0 id1 id2 };
-  termNodeLegend [label="NODE"];
+  termNodeLegend [label="TERMINAL-NODE"];
   edge [style=invis]; node [width=0]; nodesep=0;
   termNodeLegend -> ellipsis0;
   edge [style=solid]; node [width=0.75]; nodesep=0.25;
   termNodeLegend -> idN;
-  id0 [label="value-0",style=filled,fillcolor=lightgrey];
-  id1 [label="value-1",style=filled,fillcolor=lightgrey];
-  id2 [label="value-2",style=filled,fillcolor=lightgrey];
+  id0 [label="literalValue-0",style=filled,fillcolor=lightgrey];
+  id1 [label="literalValue-1",style=filled,fillcolor=lightgrey];
+  id2 [label="literalValue-2",style=filled,fillcolor=lightgrey];
   ellipsis0 [label="..."];
   ellipsis0 [shape=none];
-  idN [label="value-N",style=filled,fillcolor=lightgrey];
+  idN [label="literalValue-N",style=filled,fillcolor=lightgrey];
 }
 
 /* END OF FILE */
