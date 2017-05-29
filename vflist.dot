@@ -66,13 +66,12 @@ digraph VFLIST {
   id4 [label="IDENT"];
   id5 [label="EMPTY"];
   
-  id1 -> { id6 id7 };
+  id1 -> id6;
   id6 [label="QUALIDENT"];
-  id7 [label="EMPTY"];
   
-  id3 -> { id8 id9 };
-  id8 [label="FIELDLISTSEQ"];
-  id9 [label="EMPTY"];
+  id3 -> { id7 id8 };
+  id7 [label="FIELDLISTSEQ"];
+  id8 [label="EMPTY"];
 }
 
 /* END OF FILE */
