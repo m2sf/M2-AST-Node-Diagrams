@@ -22,11 +22,11 @@
  *
  * @file
  *
- * stmt-label.dot
+ * ctrlstmt-label.dot
  *
- * statement label diagram.
+ * controlStmt label diagram.
  *
- * Usage: $ dot stmt-label.dot -Tps > stmt-label.ps
+ * Usage: $ dot ctrlstmt-label.dot -Tps > ctrlstmt-label.ps
  *
  * @license
  *
@@ -45,17 +45,17 @@
  * NB: Components in the domain part of email addresses are in reverse order.
  */
 
-/*** statement label ***/
+/*** controlStmt label ***/
 
-digraph statement {
+digraph controlStmt {
   graph [orientation=landscape,fontname=helvetica];
   node [fontname=helvetica,fontsize=10,shape=box,height=0.25];
   
   node [style=solid];
   edge [arrowhead=none];
-  statement -> { ASSIGN controlStmt WITH };
-  statement [style=rounded];
+  controlStmt -> { PCALL RETURN IF SWITCH loopCtrlStmt };
   controlStmt [style=rounded];
+  loopCtrlStmt [style=rounded];
 }
 
 /* END OF FILE */

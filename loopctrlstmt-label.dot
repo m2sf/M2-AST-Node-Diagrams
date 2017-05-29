@@ -22,11 +22,11 @@
  *
  * @file
  *
- * stmt-label.dot
+ * loopctrlstmt-label.dot
  *
- * statement label diagram.
+ * loopCtrlStmt label diagram.
  *
- * Usage: $ dot stmt-label.dot -Tps > stmt-label.ps
+ * Usage: $ dot loopctrlstmt-label.dot -Tps > loopctrlstmt-label.ps
  *
  * @license
  *
@@ -45,17 +45,17 @@
  * NB: Components in the domain part of email addresses are in reverse order.
  */
 
-/*** statement label ***/
+/*** loopCtrlStmt label ***/
 
-digraph statement {
+digraph loopCtrlStmt {
   graph [orientation=landscape,fontname=helvetica];
   node [fontname=helvetica,fontsize=10,shape=box,height=0.25];
+  /* nodesep=0.125; */
   
   node [style=solid];
   edge [arrowhead=none];
-  statement -> { ASSIGN controlStmt WITH };
-  statement [style=rounded];
-  controlStmt [style=rounded];
+  loopCtrlStmt -> { LOOP WHILE REPEAT FORTO EXIT };
+  loopCtrlStmt [style=rounded];
 }
 
 /* END OF FILE */
