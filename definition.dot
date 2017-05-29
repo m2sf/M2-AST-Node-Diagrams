@@ -54,7 +54,7 @@ digraph definition {
   node [style=solid];
   edge [style=solid,arrowhead=none];
   
-  definition -> { CONSTDEF TYPDEF VARDECL PROCDEF };
+  definition -> { CONSTDEF TYPEDEF VARDECL PROCDEF };
   definition [style=rounded];
 }
 
