@@ -22,11 +22,11 @@
  *
  * @file
  *
- * type-label.dot
+ * derivedtype-label.dot
  *
- * type label diagram.
+ * derivedType label diagram.
  *
- * Usage: $ dot type-label.dot -Tps > type-label.ps
+ * Usage: $ dot derivedtype-label.dot -Tps > derivedtype-label.ps
  *
  * @license
  *
@@ -45,18 +45,16 @@
  * NB: Components in the domain part of email addresses are in reverse order.
  */
 
-/*** type label ***/
+/*** derivedType label ***/
 
-digraph type {
+digraph derivedType {
   graph [orientation=landscape,fontname=helvetica];
   node [fontname=helvetica,fontsize=10,shape=box,height=0.25];
   
   node [style=solid];
   edge [arrowhead=none];
-  anyType -> { derivedType ENUM SET ARRAY anyRecordType POINTER PROCTYPE };
-  anyType [style=rounded];
+  derivedType -> { IDENT QUALIDENT SUBR };
   derivedType [style=rounded];
-  anyRecordType [style=rounded];
 }
 
 /* END OF FILE */

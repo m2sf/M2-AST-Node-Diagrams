@@ -22,11 +22,11 @@
  *
  * @file
  *
- * type-label.dot
+ * recordtype-label.dot
  *
- * type label diagram.
+ * recordType label diagram.
  *
- * Usage: $ dot type-label.dot -Tps > type-label.ps
+ * Usage: $ dot recordtype-label.dot -Tps > recordtype-label.ps
  *
  * @license
  *
@@ -45,17 +45,15 @@
  * NB: Components in the domain part of email addresses are in reverse order.
  */
 
-/*** type label ***/
+/*** recordType label ***/
 
-digraph type {
+digraph recordType {
   graph [orientation=landscape,fontname=helvetica];
   node [fontname=helvetica,fontsize=10,shape=box,height=0.25];
   
   node [style=solid];
   edge [arrowhead=none];
-  anyType -> { derivedType ENUM SET ARRAY anyRecordType POINTER PROCTYPE };
-  anyType [style=rounded];
-  derivedType [style=rounded];
+  anyRecordType -> { RECORD EXTREC VRNTREC };
   anyRecordType [style=rounded];
 }
 
